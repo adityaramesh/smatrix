@@ -10,9 +10,9 @@
 % egreg. The original listing appears in the URL given below. I have adapted
 % their code into this package, so that users can choose between the original
 % matrix environments and the new matrix environments with the reduced minus
-% signs. Four new environments are defined: apmatrix, abmatrix, aBmatrix,
-% avmatrix, and aVmatrix. These environments function analogously to the
-% corresponding environments without the 'a', but reduce the length of the minus
+% signs. Four new environments are defined: spmatrix, sbmatrix, sBmatrix,
+% svmatrix, and sVmatrix. These environments function analogously to the
+% corresponding environments without the 's', but reduce the length of the minus
 % signs.
 %
 
@@ -65,7 +65,7 @@
 %}
 %\makeatother
 
-\newenvironment{apmatrix}
+\newenvironment{spmatrix}
 {%
 	\mathcode`-=\string"8000
 	\begingroup\lccode`~=`-
@@ -76,7 +76,7 @@
 	\end{pmatrix}
 }
 
-\newenvironment{abmatrix}
+\newenvironment{sbmatrix}
 {%
 	\mathcode`-=\string"8000
 	\begingroup\lccode`~=`-
@@ -87,7 +87,7 @@
 	\end{bmatrix}
 }
 
-\newenvironment{aBmatrix}
+\newenvironment{sBmatrix}
 {%
 	\mathcode`-=\string"8000
 	\begingroup\lccode`~=`-
@@ -98,7 +98,7 @@
 	\end{Bmatrix}
 }
 
-\newenvironment{avmatrix}
+\newenvironment{svmatrix}
 {%
 	\mathcode`-=\string"8000
 	\begingroup\lccode`~=`-
@@ -109,7 +109,7 @@
 	\end{vmatrix}
 }
 
-\newenvironment{aVmatrix}
+\newenvironment{sVmatrix}
 {%
 	\mathcode`-=\string"8000
 	\begingroup\lccode`~=`-

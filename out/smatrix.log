@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/MacPorts 2012_5) (format=pdflatex 2012.11.29)  4 FEB 2013 05:31
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/MacPorts 2012_5) (format=pdflatex 2012.11.29)  4 FEB 2013 05:37
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -160,7 +160,7 @@ Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 \Gin@req@height=\dimen121
 \Gin@req@width=\dimen122
 ))
-No file smatrix.aux.
+(out/smatrix.aux)
 \openout1 = `smatrix.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 10.
@@ -175,6 +175,7 @@ LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 10.
 LaTeX Font Info:    ... okay on input line 10.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 10.
 LaTeX Font Info:    ... okay on input line 10.
+
 (/opt/local/share/texmf-texlive-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count106
@@ -241,8 +242,8 @@ e
 {/opt/local/var/db/texmf/fonts/map/pdftex/updmap/pdftex.map}]
 (out/smatrix.aux) ) 
 Here is how much of TeX's memory you used:
- 2968 strings out of 494763
- 41573 string characters out of 3171441
+ 2970 strings out of 494763
+ 41603 string characters out of 3171441
  102667 words of memory out of 3000000
  6172 multiletter control sequences out of 15000+200000
  7053 words of font info for 26 fonts, out of 3000000 for 9000

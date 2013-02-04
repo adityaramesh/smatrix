@@ -10,7 +10,10 @@
 This package defines a set of alternate matrix environments (`spmatrix`,
 `sbmatrix`, `sBmatrix` `svmatrix`, and `sVmatrix`) that reduce the length of the
 minus signs within them in order to achieve better alignment of the entries
-within each column.
+within each column. The main code for this package is a result of the
+contributions by Heiko Oberdiek and egreg; the discussion and original listing
+can be read
+[here](http://tex.stackexchange.com/questions/96615/replacing-leading-minus-signs-in-environment).
 
 # Installation
 

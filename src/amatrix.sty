@@ -1,0 +1,121 @@
+%
+% File Name:	amatrix.tex
+% Authors:	Heiko Oberdiek
+% 		egreg
+% 		Aditya Ramesh
+% Date:		02/03/2013
+% Contact:	_@adityaramesh.com
+%
+% This main code for this package was written jointly by both Heiko Oberdiek and
+% egreg. The original listing appears in the URL given below. I have adapted
+% their code into this package, so that users can choose between the original
+% matrix environments and the new matrix environments with the reduced minus
+% signs. Four new environments are defined: apmatrix, abmatrix, aBmatrix,
+% avmatrix, and aVmatrix. These environments function analogously to the
+% corresponding environments without the 'a', but reduce the length of the minus
+% signs.
+%
+
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{amatrix}
+\RequirePackage{amsmath}
+\RequirePackage{etoolbox}
+\RequirePackage{mathtools}
+\RequirePackage{graphicx}
+
+%
+% The following code was created by both Heiko Oberdiek and egreg. Heiko
+% Oberdiek wrote the code to define the shortened version of the minus sign for
+% matrix environments. egreg demonstrated how code can be injected into
+% \env@matrix to replace the regular minus sign by the reduced minus sign
+% automatically. The original post can be seen here:
+% http://tex.stackexchange.com/questions/96615/replacing-leading-minus-signs-in-environment.
+%
+
+% Save a copy of the original minus in math mode
+\mathchardef\realminus\mathcode`-
+% Define the shortened version of minus (H. Oberdiek)
+\newcommand{\reducedminus}[2]{%
+	\leavevmode\hphantom{0}%
+	\llap{%
+		\settowidth{\dimen0 }{$#10$}%
+		\resizebox{1.1\dimen0 }{\height}{$#1\realminus$}%
+	}%
+}
+
+% Use the code below (in place of the \newcommand that appears below it) if you
+% do not want the minus signs in subscripts and superscripts to be shortened.
+
+%% Define \matminus so that it doesn't reduce the minus in sub/superscripts
+%\newcommand{\matminus}{%
+%	\mathchoice{\reducedminus}{\reducedminus}%
+%	{\realminus}{\realminus}%
+%}
+
+\newcommand{\matminus}{\mathpalette\reducedminus\relax}
+
+% This code is commented out, since we only want the replacement to occur within
+% the matrix environments defined below.
+
+%\makeatletter
+%% Make - become \matminus in matrices
+%\preto\env@matrix{\mathcode`-=\string"8000
+%  \begingroup\lccode`~=`-
+%  \lowercase{\endgroup\let~}\matminus
+%}
+%\makeatother
+
+\newenvironment{apmatrix}
+{%
+	\mathcode`-=\string"8000
+	\begingroup\lccode`~=`-
+	\lowercase{\endgroup\let~}\matminus
+	\begin{pmatrix}
+}
+{%
+	\end{pmatrix}
+}
+
+\newenvironment{abmatrix}
+{%
+	\mathcode`-=\string"8000
+	\begingroup\lccode`~=`-
+	\lowercase{\endgroup\let~}\matminus
+	\begin{bmatrix}
+}
+{%
+	\end{bmatrix}
+}
+
+\newenvironment{aBmatrix}
+{%
+	\mathcode`-=\string"8000
+	\begingroup\lccode`~=`-
+	\lowercase{\endgroup\let~}\matminus
+	\begin{Bmatrix}
+}
+{%
+	\end{Bmatrix}
+}
+
+\newenvironment{avmatrix}
+{%
+	\mathcode`-=\string"8000
+	\begingroup\lccode`~=`-
+	\lowercase{\endgroup\let~}\matminus
+	\begin{vmatrix}
+}
+{%
+	\end{vmatrix}
+}
+
+\newenvironment{aVmatrix}
+{%
+	\mathcode`-=\string"8000
+	\begingroup\lccode`~=`-
+	\lowercase{\endgroup\let~}\matminus
+	\begin{Vmatrix}
+}
+{%
+	\end{Vmatrix}
+}

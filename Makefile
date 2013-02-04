@@ -6,7 +6,7 @@
 #
 
 tex     := pdflatex
-objects := out/amatrix.pdf
+objects := out/smatrix.pdf
 
 all : $(objects)
 
@@ -17,7 +17,7 @@ clean :
 	rm -rf out/*
 
 install :
-	cp src/amatrix.sty $(TEXMFHOME)/tex/latex
+	cp src/smatrix.sty $(TEXMFHOME)/tex/latex
 
 uninstall :
-	rm $(TEXMFHOME)/tex/latex/amatrix.sty
+	rm $(TEXMFHOME)/tex/latex/smatrix.sty
